@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
     public CharacterController controller;
-    [SerializeField] private float _speed = 12f;
+    [SerializeField] private float _speed = 6f;
     [SerializeField] private float jumpHeight = 1.5f;
     [SerializeField] private float gravity = -9.81f;
     private Vector3 velocity;
@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Ground")]
     [SerializeField] private LayerMask _groundMask;
     [SerializeField] private Transform _groundCheck;
-    [SerializeField] private float _groundDistance = 0.4f;
+    [SerializeField] private float _groundDistance = 0.2f;
     private bool _isGrounded;
 
     [Header("Camera")]

@@ -10,19 +10,35 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] private Vector3 _offset;
 
     [Header("Rotation")]
-    [SerializeField] private float _mouseSensitivity = 100f;
-    private float _pitch = 0f;  // Vertical rotation
-    private float _yaw = 0f;    // Horizontal rotation
+    [SerializeField] private float _mouseSensitivity = 250f;
+    private float _pitch = 0f; // Vertical rotation
+    private float _yaw = 0f; // Horizontal rotation
+
+    [Header("Zoom")]
+    [SerializeField] private float _zoomSpeed = 10f;
+    [SerializeField] private float _minDistance = 2.5f; // Minimum distance between the camera and the player
+    [SerializeField] private float _maxDistance = 10f; // Maximum distance between the camera and the player
+    [SerializeField] private float _smoothSpeed = 5f;
+    private float _currentDistance; // Current distance between the camera and the player
+    private float _targetDistance; // Target distance after scrolling
+
+    [Header("Collision")]
+    [SerializeField] private float _collisionOffset = 0.2f; // Offset to prevent camera from clipping into walls
+    [SerializeField] private LayerMask _collisionLayers;
 
     void Start()
     {
         _yaw = transform.eulerAngles.y;
         _pitch = transform.eulerAngles.x;
+
+        _currentDistance = Vector3.Distance(transform.position, _target.position);
+        _targetDistance = _currentDistance;
     }
 
     private void LateUpdate()
     {
         CameraMovement();
+        CameraZoom();
     }
 
     private void CameraMovement()
@@ -37,9 +53,56 @@ public class CameraFollow : MonoBehaviour
         _pitch = Mathf.Clamp(_pitch, -90f, 90f);  // Limit vertical rotation
 
         // Update camera rotation
-        transform.rotation = Quaternion.Euler(_pitch, _yaw, 0f);
+        Quaternion rotation = Quaternion.Euler(_pitch, _yaw, 0f);
 
-        // Keep the camera at the correct position relative to the player
-        transform.position = _target.position + transform.rotation * _offset;
+        // Calculate the desired position
+        Vector3 desiredPosition = _target.position + rotation * _offset;
+
+        // Check for collision
+        Vector3 directionToTarget = desiredPosition - _target.position;
+        float distanceToTarget = directionToTarget.magnitude;
+
+        RaycastHit hit;
+        if (Physics.SphereCast(_target.position, 0.2f, directionToTarget, out hit, distanceToTarget, _collisionLayers))
+        {
+            // If there's a collision, move the camera to the hit point
+            transform.position = hit.point + hit.normal * _collisionOffset;
+        }
+        else
+        {
+            // If no collision, move to the desired position
+            transform.position = desiredPosition;
+        }
+
+        // Always look at the target
+        transform.LookAt(_target);
+    }
+
+    private void CameraZoom()
+    {
+        // Get the scroll input
+        float scrollInput = Input.GetAxis("Mouse ScrollWheel");
+
+        // Calculate the new distance based on scroll input
+        _targetDistance -= scrollInput * _zoomSpeed;
+        _targetDistance = Mathf.Clamp(_targetDistance, _minDistance, _maxDistance);
+
+        // Smoothly move towards the target distance
+        _currentDistance = Mathf.Lerp(_currentDistance, _targetDistance, Time.deltaTime * _smoothSpeed);
+
+        // Update the camera's position to maintain the new distance
+        Vector3 direction = (transform.position - _target.position).normalized;
+        Vector3 desiredPosition = _target.position + direction * _currentDistance;
+
+        // Check for collision when zooming
+        RaycastHit hit;
+        if (Physics.SphereCast(_target.position, 0.2f, direction, out hit, _currentDistance, _collisionLayers))
+        {
+            transform.position = hit.point + hit.normal * _collisionOffset;
+        }
+        else
+        {
+            transform.position = desiredPosition;
+        }
     }
 }

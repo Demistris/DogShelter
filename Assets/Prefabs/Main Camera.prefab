@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8306676800010195867
 Transform:
   m_ObjectHideFlags: 0
@@ -108,3 +108,11 @@ MonoBehaviour:
   _target: {fileID: 0}
   _offset: {x: 0, y: 2.5, z: -10}
   _mouseSensitivity: 250
+  _zoomSpeed: 10
+  _minDistance: 2.5
+  _maxDistance: 10
+  _smoothSpeed: 5
+  _collisionOffset: 0.2
+  _collisionLayers:
+    serializedVersion: 2
+    m_Bits: 128
