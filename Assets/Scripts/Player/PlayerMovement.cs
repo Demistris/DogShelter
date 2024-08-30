@@ -5,9 +5,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
-    [SerializeField] private Rigidbody _rigidBody;
+    public CharacterController controller;
     [SerializeField] private float _speed = 12f;
-    [SerializeField] private float _jumpForce = 5f;
+    [SerializeField] private float jumpHeight = 1.5f;
+    [SerializeField] private float gravity = -9.81f;
+    private Vector3 velocity;
 
     [Header("Ground")]
     [SerializeField] private LayerMask _groundMask;
@@ -21,16 +23,25 @@ public class PlayerMovement : MonoBehaviour
     [Header("Model")]
     [SerializeField] private Transform _modelTransform;
 
-    private void Update()
+    private void Start()
+    {
+        _cameraTransform.gameObject.SetActive(true);
+    }
+
+    private void FixedUpdate()
     {
         Movement();
-        Jump();
     }
 
     private void Movement()
     {
         // Check if grounded
         _isGrounded = Physics.CheckSphere(_groundCheck.position, _groundDistance, _groundMask);
+
+        if (_isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f;
+        }
 
         // Input for movement
         float horizontal = Input.GetAxis("Horizontal");
@@ -47,21 +58,25 @@ public class PlayerMovement : MonoBehaviour
         forward.Normalize();
         right.Normalize();
 
-        Vector3 moveDirection = forward * vertical + right * horizontal;
-        _rigidBody.MovePosition(_rigidBody.position + moveDirection * _speed * Time.deltaTime);
+        // Move the player
+        Vector3 moveDirection = (forward * vertical + right * horizontal).normalized;
+        controller.Move(moveDirection * _speed * Time.deltaTime);
 
-        if(moveDirection.magnitude > 0.1f)
+        // Rotate the model to face the movement direction
+        if (moveDirection.magnitude > 0.1f)
         {
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
             _modelTransform.rotation = Quaternion.Slerp(_modelTransform.rotation, targetRotation, 0.1f);
         }
-    }
 
-    private void Jump()
-    {
+        // Jumping
         if (Input.GetButtonDown("Jump") && _isGrounded)
         {
-            _rigidBody.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
+
+        // Apply gravity
+        velocity.y += gravity * Time.deltaTime;
+        controller.Move(velocity * Time.deltaTime);
     }
 }
