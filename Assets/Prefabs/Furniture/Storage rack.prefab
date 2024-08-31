@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3402936209368387060
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: fbf916047d3ae0f4481024c15fd501a7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fbf916047d3ae0f4481024c15fd501a7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fbf916047d3ae0f4481024c15fd501a7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fbf916047d3ae0f4481024c15fd501a7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fbf916047d3ae0f4481024c15fd501a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fbf916047d3ae0f4481024c15fd501a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fbf916047d3ae0f4481024c15fd501a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fbf916047d3ae0f4481024c15fd501a7, type: 3}
+      propertyPath: m_Name
+      value: Storage rack
+      objectReference: {fileID: 0}
+    - target: {fileID: 7410825819721324529, guid: fbf916047d3ae0f4481024c15fd501a7, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8420198801484654089, guid: fbf916047d3ae0f4481024c15fd501a7, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: -3830528551544128778, guid: fbf916047d3ae0f4481024c15fd501a7, type: 3}
+    - {fileID: 5944215007942280078, guid: fbf916047d3ae0f4481024c15fd501a7, type: 3}
+    - {fileID: -4177245165587029522, guid: fbf916047d3ae0f4481024c15fd501a7, type: 3}
+    - {fileID: 2550463727306718371, guid: fbf916047d3ae0f4481024c15fd501a7, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fbf916047d3ae0f4481024c15fd501a7, type: 3}
