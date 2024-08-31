@@ -116,3 +116,4 @@ MonoBehaviour:
   _collisionLayers:
     serializedVersion: 2
     m_Bits: 128
+  _minHeightAboveTarget: 1.5

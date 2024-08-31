@@ -25,6 +25,7 @@ public class CameraFollow : MonoBehaviour
     [Header("Collision")]
     [SerializeField] private float _collisionOffset = 0.2f; // Offset to prevent camera from clipping into walls
     [SerializeField] private LayerMask _collisionLayers;
+    [SerializeField] private float _minHeightAboveTarget = 1f; // Minimum height above the target's feet
 
     void Start()
     {
@@ -33,6 +34,10 @@ public class CameraFollow : MonoBehaviour
 
         _currentDistance = Vector3.Distance(transform.position, _target.position);
         _targetDistance = _currentDistance;
+
+        // Hide and lock cursor
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     private void LateUpdate()
@@ -57,6 +62,9 @@ public class CameraFollow : MonoBehaviour
 
         // Calculate the desired position
         Vector3 desiredPosition = _target.position + rotation * _offset;
+
+        // Ensure the camera doesn't go below the minimum height
+        desiredPosition.y = Mathf.Max(desiredPosition.y, _target.position.y + _minHeightAboveTarget);
 
         // Check for collision
         Vector3 directionToTarget = desiredPosition - _target.position;
@@ -93,6 +101,9 @@ public class CameraFollow : MonoBehaviour
         // Update the camera's position to maintain the new distance
         Vector3 direction = (transform.position - _target.position).normalized;
         Vector3 desiredPosition = _target.position + direction * _currentDistance;
+
+        // Ensure the camera doesn't go below the minimum height
+        desiredPosition.y = Mathf.Max(desiredPosition.y, _target.position.y + _minHeightAboveTarget);
 
         // Check for collision when zooming
         RaycastHit hit;
