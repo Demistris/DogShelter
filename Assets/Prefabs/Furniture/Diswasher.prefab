@@ -64,18 +64,46 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 454973ddd95356743b2ab68166f62415, type: 2}
+    - target: {fileID: -7410238331727016341, guid: d4b20d170bc806b47bf3217fda393fb4, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -5138520137816595442, guid: d4b20d170bc806b47bf3217fda393fb4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2bb047152481d4b4ebc26983cee55a9e, type: 2}
+    - target: {fileID: -4282672190775914000, guid: d4b20d170bc806b47bf3217fda393fb4, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -3221707781875652887, guid: d4b20d170bc806b47bf3217fda393fb4, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -3215316155744688546, guid: d4b20d170bc806b47bf3217fda393fb4, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -1931587202195566849, guid: d4b20d170bc806b47bf3217fda393fb4, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d4b20d170bc806b47bf3217fda393fb4, type: 3}
       propertyPath: m_Name
       value: Diswasher
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d4b20d170bc806b47bf3217fda393fb4, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1302474935162270244, guid: d4b20d170bc806b47bf3217fda393fb4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7acd2f975bd07cb499a7d6caad7ef4d2, type: 2}
+    - target: {fileID: 2416238330318241504, guid: d4b20d170bc806b47bf3217fda393fb4, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3473511512994376169, guid: d4b20d170bc806b47bf3217fda393fb4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

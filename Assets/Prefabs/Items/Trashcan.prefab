@@ -60,9 +60,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4585872339400942637, guid: d595c695a8259a44aa6e6e095c6f36f9, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 533159421357019692, guid: d595c695a8259a44aa6e6e095c6f36f9, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d595c695a8259a44aa6e6e095c6f36f9, type: 3}
       propertyPath: m_Name
       value: Trashcan
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d595c695a8259a44aa6e6e095c6f36f9, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1120200270202947891, guid: d595c695a8259a44aa6e6e095c6f36f9, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1909011907107325307, guid: d595c695a8259a44aa6e6e095c6f36f9, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3888743585242173830, guid: d595c695a8259a44aa6e6e095c6f36f9, type: 3}
       propertyPath: m_LocalRotation.w

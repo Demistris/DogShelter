@@ -65,6 +65,10 @@ PrefabInstance:
       value: Sofa
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7d7a455f701834045bf0bbe2a4f2db6a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7d7a455f701834045bf0bbe2a4f2db6a, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
