@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: a58856a8071921e4ea3fb5f6df36428b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.01
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a58856a8071921e4ea3fb5f6df36428b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.01
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a58856a8071921e4ea3fb5f6df36428b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.01
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a58856a8071921e4ea3fb5f6df36428b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -67,5 +67,35 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2026465516853915159, guid: a58856a8071921e4ea3fb5f6df36428b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6709985826471727592}
   m_SourcePrefab: {fileID: 100100000, guid: a58856a8071921e4ea3fb5f6df36428b, type: 3}
+--- !u!1 &9192892087933997087 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2026465516853915159, guid: a58856a8071921e4ea3fb5f6df36428b, type: 3}
+  m_PrefabInstance: {fileID: 7173324925290806792}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &6709985826471727592
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9192892087933997087}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2102406227470525794, guid: a58856a8071921e4ea3fb5f6df36428b, type: 3}

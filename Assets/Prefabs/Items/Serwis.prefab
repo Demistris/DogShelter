@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 3144494485008416452}
   - component: {fileID: 1720610340663036308}
   - component: {fileID: 8191241235477709502}
+  - component: {fileID: 3447526800991408387}
   m_Layer: 0
   m_Name: Wineglass_SSf__
   m_TagString: Untagged
@@ -166,6 +167,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3447526800991408387
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174238635596666362}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3112054080730990810, guid: 180543da660972b4a8a086254b8db325, type: 3}
 --- !u!1 &1274114677999904883
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,6 +234,7 @@ GameObject:
   - component: {fileID: 906185153655370159}
   - component: {fileID: 8584024533564985716}
   - component: {fileID: 3023577494159508832}
+  - component: {fileID: 5134997474918131847}
   m_Layer: 0
   m_Name: Candle_2DF04
   m_TagString: Untagged
@@ -283,6 +307,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5134997474918131847
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708418602054873190}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3539580654741471838, guid: 180543da660972b4a8a086254b8db325, type: 3}
 --- !u!1 &2135926980611972153
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,6 +374,7 @@ GameObject:
   - component: {fileID: 1040036119838982639}
   - component: {fileID: 4948498242630505868}
   - component: {fileID: 6270950822932698206}
+  - component: {fileID: 8265106245379530472}
   m_Layer: 0
   m_Name: Stand Candle low
   m_TagString: Untagged
@@ -401,6 +448,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8265106245379530472
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2204082279743838379}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8298549074730139967, guid: 180543da660972b4a8a086254b8db325, type: 3}
 --- !u!1 &4706169293767359321
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,6 +766,7 @@ GameObject:
   - component: {fileID: 4678305544153494586}
   - component: {fileID: 298607685609869166}
   - component: {fileID: 6282481734097479542}
+  - component: {fileID: 2667157043581233724}
   m_Layer: 0
   m_Name: cocktail_SSS
   m_TagString: Untagged
@@ -769,3 +839,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2667157043581233724
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6845903969162300874}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5802788856673250765, guid: 180543da660972b4a8a086254b8db325, type: 3}
