@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 896faaa17b6e64a43b67738cab54258c
+guid: 53502e638642a6f40b997677d327bae0
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: None__DiffuseBowl_psd
+    second: {fileID: 2100000, guid: a14ffb9692c5e794bb76fa1391f0cfa0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
