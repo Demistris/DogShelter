@@ -59,6 +59,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d16519029f640cd4991aceb181ffd0ac, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4557581646624894042}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d16519029f640cd4991aceb181ffd0ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2463617792460562216}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d16519029f640cd4991aceb181ffd0ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 743576840953904350}
   m_SourcePrefab: {fileID: 100100000, guid: d16519029f640cd4991aceb181ffd0ac, type: 3}
 --- !u!1 &7949547419461579057 stripped
 GameObject:
@@ -87,3 +93,43 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2385623596896597513, guid: d16519029f640cd4991aceb181ffd0ac, type: 3}
+--- !u!65 &2463617792460562216
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7949547419461579057}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.4691523, y: 1.0484829, z: 1.7498844}
+  m_Center: {x: 0.55677104, y: 0.5160655, z: 0.41720724}
+--- !u!114 &743576840953904350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7949547419461579057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b20e8df93f36fe740807c7ffe73b0210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dialogueUI: {fileID: 0}
+  _dialogueText: {fileID: 0}
+  _player: {fileID: 0}
+  _camera: {fileID: 0}
+  _dialogueLines:
+  - I am a doberman
+  - Second line
