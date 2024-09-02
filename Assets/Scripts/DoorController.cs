@@ -9,15 +9,11 @@ public class DoorController : MonoBehaviour
     [SerializeField] private Transform _leftDoor;
     [SerializeField] private float _openAngle = 90f; // How much the doors open in degrees
     [SerializeField] private float _doorSpeed = 2f; // How fast the doors open/close
-
     [SerializeField] private Vector3 _leftDoorAxis = Vector3.up;
     [SerializeField] private Vector3 _rightDoorAxis = Vector3.up;
 
     private Quaternion _rightDoorClosedRotation;
     private Quaternion _leftDoorClosedRotation;
-    private Quaternion _rightDoorOpenRotation;
-    private Quaternion _leftDoorOpenRotation;
-
     private bool _isOpening = false;
 
     private void Start()

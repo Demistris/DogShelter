@@ -68,6 +68,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c86e58012837b5a48b1fa8736a641ef3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3046319916185137800}
     - targetCorrespondingSourceObject: {fileID: -2719785156127946179, guid: c86e58012837b5a48b1fa8736a641ef3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1143111457910332324}
@@ -78,6 +81,38 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 7439860846138340605}
   m_SourcePrefab: {fileID: 100100000, guid: c86e58012837b5a48b1fa8736a641ef3, type: 3}
+--- !u!1 &1628902795978230351 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c86e58012837b5a48b1fa8736a641ef3, type: 3}
+  m_PrefabInstance: {fileID: 1898952958287116062}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &3046319916185137800
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628902795978230351}
+  serializedVersion: 4
+  m_Mass: 0.1
+  m_Drag: 0.05
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &4619301686739762467 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2719785156127946179, guid: c86e58012837b5a48b1fa8736a641ef3, type: 3}
@@ -117,7 +152,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5809892647179489994}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 9a6e54a712c23984ba22195cff0cae39, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
