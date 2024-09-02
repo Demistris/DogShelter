@@ -7,6 +7,7 @@ public class PickingUpObjects : MonoBehaviour
     [SerializeField] private Transform _pickupParent; // The position where the picked-up object will be held
 
     private GameObject _currentObject;
+    private GameObject _currentObjectParent;
     private List<GameObject> _pickupableObjectsInRange = new List<GameObject>();
     private bool _isCarrying = false;
 
@@ -53,6 +54,11 @@ public class PickingUpObjects : MonoBehaviour
 
     private void PickupObject(GameObject obj)
     {
+        if(obj.transform.parent != null)
+        {
+            _currentObjectParent = obj.transform.parent.gameObject;
+        }
+
         obj.transform.SetParent(_pickupParent);
         obj.transform.localPosition = Vector3.zero;
         obj.transform.localRotation = Quaternion.identity;
@@ -72,7 +78,14 @@ public class PickingUpObjects : MonoBehaviour
     {
         if (_currentObject != null)
         {
-            _currentObject.transform.SetParent(null); //or parent that was default
+            if(_currentObjectParent != null)
+            {
+                _currentObject.transform.SetParent(_currentObjectParent.transform);
+            }
+            else
+            {
+                _currentObject.transform.SetParent(null);
+            }
 
             Rigidbody rigidbody = _currentObject.GetComponent<Rigidbody>();
 
@@ -81,6 +94,7 @@ public class PickingUpObjects : MonoBehaviour
                 rigidbody.isKinematic = false;
             }
 
+            _currentObjectParent = null;
             _currentObject = null;
             _isCarrying = false;
         }
