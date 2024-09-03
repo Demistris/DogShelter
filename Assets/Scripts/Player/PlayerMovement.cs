@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Model")]
     [SerializeField] private Transform _modelTransform;
 
+    public bool CompleteQuest; // TEMP
+
     private void Start()
     {
         _cameraTransform.gameObject.SetActive(true);
@@ -31,6 +33,11 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         Movement();
+
+        if(CompleteQuest)
+        {
+            QuestManager.Instance.CheckQuest();
+        }
     }
 
     private void Movement()

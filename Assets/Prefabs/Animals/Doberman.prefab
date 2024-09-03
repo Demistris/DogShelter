@@ -112,8 +112,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.4691523, y: 1.0484829, z: 1.7498844}
-  m_Center: {x: 0.55677104, y: 0.5160655, z: 0.41720724}
+  m_Size: {x: 1.3900805, y: 1.0484829, z: 2.088053}
+  m_Center: {x: 0.26419586, y: 0.5160655, z: 0.5862918}
 --- !u!114 &743576840953904350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,8 +128,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dialogueUI: {fileID: 0}
   _dialogueText: {fileID: 0}
+  _initialDialogueLines:
+  - Initial dialogue 1
+  - Initial dialogue 2
+  - Initial dialogue 3
+  _questInProgressLines:
+  - Quest in progress 1
+  _questCompletedLines:
+  - Quest completed 1
+  - Quest completed 2
+  - Quest completed 3
+  - Quest completed 4
+  _questBlockedLines:
+  - Quest blocked 1
   _player: {fileID: 0}
   _camera: {fileID: 0}
-  _dialogueLines:
-  - I am a doberman
-  - Second line
+  _quest: {fileID: 11400000, guid: df08edf22b9386946ba7c102e832793a, type: 2}

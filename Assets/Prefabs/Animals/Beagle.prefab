@@ -59,6 +59,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 653c8d335a4d6fe4ebef74d9ad3de7d3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 118844894154895958}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 653c8d335a4d6fe4ebef74d9ad3de7d3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6855489670669342264}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 653c8d335a4d6fe4ebef74d9ad3de7d3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4550471329962769929}
   m_SourcePrefab: {fileID: 100100000, guid: 653c8d335a4d6fe4ebef74d9ad3de7d3, type: 3}
 --- !u!1 &3537623260003269942 stripped
 GameObject:
@@ -87,3 +93,54 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1540007921189520997, guid: 653c8d335a4d6fe4ebef74d9ad3de7d3, type: 3}
+--- !u!65 &6855489670669342264
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3537623260003269942}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.98286796, y: 1.095201, z: 2.0064328}
+  m_Center: {x: -0.22549255, y: 0.5391846, z: 0.5163598}
+--- !u!114 &4550471329962769929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3537623260003269942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b20e8df93f36fe740807c7ffe73b0210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dialogueUI: {fileID: 0}
+  _dialogueText: {fileID: 0}
+  _initialDialogueLines:
+  - Initial dialogue 1
+  - Initial dialogue 2
+  - Initial dialogue 3
+  _questInProgressLines:
+  - Quest in progress 1
+  _questCompletedLines:
+  - Quest completed 1
+  - Quest completed 2
+  - Quest completed 3
+  - Quest completed 4
+  _questBlockedLines:
+  - Quest blocked 1
+  _player: {fileID: 0}
+  _camera: {fileID: 0}
+  _quest: {fileID: 11400000, guid: 50abc4576f72c7f468522049ac6fd678, type: 2}
