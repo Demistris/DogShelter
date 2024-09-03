@@ -143,4 +143,4 @@ MonoBehaviour:
   - Quest blocked 1
   _player: {fileID: 0}
   _camera: {fileID: 0}
-  _quest: {fileID: 11400000, guid: 55897a43a5c09f647ae948999b16fa6b, type: 2}
+  _quest: {fileID: 0}

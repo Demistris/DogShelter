@@ -5,6 +5,7 @@ using UnityEngine;
 public class PickingUpObjects : MonoBehaviour
 {
     [SerializeField] private Transform _pickupParent; // The position where the picked-up object will be held
+    [SerializeField] private PlayerQuestController _playerQuestController;
 
     private GameObject _currentObject;
     private GameObject _currentObjectParent;
@@ -21,7 +22,15 @@ public class PickingUpObjects : MonoBehaviour
             }
             else if(_pickupableObjectsInRange.Count > 0)
             {
-                PickupObject(_pickupableObjectsInRange[0]);
+                if(_pickupableObjectsInRange[0].CompareTag("CollectibleItem"))
+                {
+                    _playerQuestController.CollectItem(_pickupableObjectsInRange[0].gameObject);
+                    _pickupableObjectsInRange.Remove(_pickupableObjectsInRange[0].gameObject);
+                }
+                else
+                {
+                    PickupObject(_pickupableObjectsInRange[0]);
+                }
             }
         }
     }
@@ -38,6 +47,14 @@ public class PickingUpObjects : MonoBehaviour
                 {
                     _pickupableObjectsInRange.Add(other.gameObject);
                 }
+            }
+        }
+
+        if(other.CompareTag("CollectibleItem"))
+        {
+            if (!_pickupableObjectsInRange.Contains(other.gameObject))
+            {
+                _pickupableObjectsInRange.Insert(0, other.gameObject);
             }
         }
     }

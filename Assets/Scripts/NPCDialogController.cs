@@ -23,7 +23,6 @@ public class NPCDialogController : MonoBehaviour
     [SerializeField] private CameraFollow _camera;
     private bool _isPlayerInRange = false;
 
-    //Quest-related states
     [SerializeField] private Quest _quest;
 
     private void Start()
