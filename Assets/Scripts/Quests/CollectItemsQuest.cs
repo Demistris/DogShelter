@@ -26,4 +26,9 @@ public class CollectItemsQuest : Quest
             Debug.Log($"Collected {_currentItemCount}/{RequiredItemCount} items.");
         }
     }
+
+    public string GetItemCollectionProgress()
+    {
+        return $"{_currentItemCount}/{RequiredItemCount}";
+    }
 }

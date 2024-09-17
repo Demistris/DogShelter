@@ -129,18 +129,24 @@ MonoBehaviour:
   _dialogueUI: {fileID: 0}
   _dialogueText: {fileID: 0}
   _initialDialogueLines:
-  - Initial dialogue 1
-  - Initial dialogue 2
-  - Initial dialogue 3
+  - 'Oh, hey there! '
+  - "I\u2019ve been dreaming of finding my forever home, but I don\u2019t feel quite\u2026
+    ready. "
+  - 'I want to look my best when someone comes to adopt me, you know? '
+  - 'Would you help me collect 5 clothes from around the shelter? '
+  - "With them, I\u2019ll feel so much prettier and confident! "
+  - What do you say? Help a friend out?
   _questInProgressLines:
-  - Quest in progress 1
+  - 'Thanks again for helping me out! '
+  - 'I can''t wait to see how amazing I''ll look. '
+  - "Keep going \u2014 I'm counting on you!"
   _questCompletedLines:
-  - Quest completed 1
-  - Quest completed 2
-  - Quest completed 3
-  - Quest completed 4
+  - 'Wow, you did it! Look at these beautiful clothes! '
+  - "I can\u2019t believe it, I feel so much more confident already! "
+  - "Thank you so much, friend. Now I know I\u2019m ready to find my new family. "
+  - "You\u2019re the best!"
   _questBlockedLines:
-  - Quest blocked 1
+  - Hi, what's up?
   _player: {fileID: 0}
   _camera: {fileID: 0}
   _quest: {fileID: 11400000, guid: df08edf22b9386946ba7c102e832793a, type: 2}

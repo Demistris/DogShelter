@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 
@@ -8,6 +9,8 @@ public class QuestManager : MonoBehaviour
     public static QuestManager Instance;
 
     [SerializeField] private PlayerQuestController _player;
+    [SerializeField] private GameObject _collectItemsUI;
+    [SerializeField] private TextMeshProUGUI _collectItemsText;
     private Quest _activeQuest;
 
     private void Awake()
@@ -30,6 +33,12 @@ public class QuestManager : MonoBehaviour
             _activeQuest = newQuest;
             newQuest.StartQuest();
             _player.QuestStarted(newQuest);
+
+            if(newQuest is CollectItemsQuest collectQuest)
+            {
+                _collectItemsUI.SetActive(true);
+                _collectItemsText.text = collectQuest.GetItemCollectionProgress();
+            }
         }
     }
 
@@ -38,6 +47,12 @@ public class QuestManager : MonoBehaviour
         if (_activeQuest != null)
         {
             Debug.Log($"Quest Completed: {_activeQuest.QuestName}");
+
+            if (_activeQuest is CollectItemsQuest)
+            {
+                _collectItemsUI.SetActive(false);
+            }
+
             _activeQuest = null;
         }
     }
@@ -60,6 +75,7 @@ public class QuestManager : MonoBehaviour
         if(_activeQuest is CollectItemsQuest collectQuest)
         {
             collectQuest.CollectItem();
+            _collectItemsText.text = collectQuest.GetItemCollectionProgress();
         }
     }
 }
